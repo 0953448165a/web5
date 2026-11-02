@@ -1,0 +1,22 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/maps' as *;
+
+@layer components {
+  .badge {
+    @include badge-base;
+    background-color: var(--color-surface-alt);
+    color: var(--color-text);
+    @each $name, $bg, $text in $category-badges {
+      &[data-category='#{$name}'] {
+        background-color: var(#{$bg});
+        color: var(#{$text});
+      }
+    }
+    @each $name, $bg, $text in $size-badges {
+      &[data-size='#{$name}'] {
+        background-color: var(#{$bg});
+        color: var(#{$text});
+      }
+    }
+  }
+}

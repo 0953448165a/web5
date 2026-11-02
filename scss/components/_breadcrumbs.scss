@@ -1,0 +1,26 @@
+@layer components {
+  .breadcrumbs {
+    margin-block-end: var(--space-m);
+    font-size: 0.9375rem;
+
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      display: inline;
+    }
+    li + li::before {
+      content: '/';
+      margin-inline: var(--space-s);
+      color: var(--color-text-muted);
+    }
+
+    [aria-current='page'] {
+      color: var(--color-text-muted);
+      text-decoration: none;
+    }
+  }
+}

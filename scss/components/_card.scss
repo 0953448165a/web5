@@ -1,0 +1,68 @@
+// ---------- Картка каталогу ----------
+@layer components {
+  .card {
+    margin-block-end: var(--space-m);
+    padding: var(--space-m);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    &:has([data-hypoallergenic='true']) {
+      border-color: var(--color-accent);
+      border-width: 2px;
+      background-color: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface));
+    }
+  }
+
+  .card__image {
+    display: block;
+    margin-block-end: var(--space-m);
+    border-radius: var(--radius-s);
+  }
+
+  .card__title {
+    margin-block-end: var(--space-s);
+    color: var(--color-text);
+    font-size: 1.25rem;
+  }
+
+  .card__facts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-inline-end: var(--space-xs);
+      margin-block-end: var(--space-xs);
+    }
+  }
+  .card__weight {
+    display: inline-block;
+    padding-block: var(--space-xs);
+    padding-inline: var(--space-s);
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-s);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .card__status {
+    display: inline-block;
+    font-size: 0.9375rem;
+
+    &:is([data-hypoallergenic='true'], [data-apartment='true']) {
+      color: var(--color-link);
+      font-weight: 600;
+
+      &::before {
+        content: '\2713\00a0'; // галочка + нерозривний пробіл
+      }
+    }
+
+    &:is([data-hypoallergenic='false'], [data-apartment='false']) {
+      color: var(--color-text-muted);
+    }
+  }
+}
