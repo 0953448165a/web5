@@ -1,0 +1,39 @@
+// ---------- Список визначень (характеристики породи) ----------
+// Розмітка: <dl><div><dt>…</dt><dd>…</dd></div>…</dl>
+@layer components {
+  .spec-list {
+    margin-block: 0 var(--space-l);
+    padding: var(--space-m);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+
+    > div {
+      padding-block: var(--space-s);
+      border-block-end: 1px dashed var(--color-border);
+
+      &:first-child {
+        padding-block-start: 0;
+      }
+
+      &:last-child {
+        padding-block-end: 0;
+        border-block-end: 0;
+      }
+    }
+
+    dt {
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    dd {
+      margin-block: var(--space-xs) 0;
+      margin-inline-start: 0;
+      font-size: 1.0625rem;
+    }
+  }
+}

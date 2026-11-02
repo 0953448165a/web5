@@ -1,0 +1,44 @@
+// ---------- Часті запитання на <details> ----------
+@layer components {
+  .faq {
+    max-inline-size: var(--measure);
+  }
+
+  .faq__item {
+    margin-block-end: var(--space-s);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-s);
+
+    > :not(summary) {
+      margin-inline: var(--space-m);
+    }
+
+    &[open] {
+      border-color: var(--color-accent);
+      > .faq__summary::before {
+        content: '\2212'; // знак мінус
+      }
+    }
+  }
+
+  .faq__summary {
+    padding: var(--space-m);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none; 
+
+    // Власний маркер у стані «закрито»
+    &::before {
+      content: '+';
+      display: inline-block;
+      inline-size: 1.5rem;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    &:hover {
+      background-color: var(--color-surface-alt);
+    }
+  }
+}

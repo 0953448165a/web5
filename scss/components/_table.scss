@@ -1,0 +1,47 @@
+// ---------- Таблиця даних (admin.html) ----------
+@layer components {
+  .data-table {
+    margin-block-end: var(--space-l);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+
+    caption {
+      padding-block: var(--space-s);
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+      text-align: start;
+    }
+
+    // Заголовки стовпців
+    thead th {
+      background-color: var(--color-surface-alt);
+      border-block-end: 2px solid var(--color-accent);
+      font-weight: 700;
+    }
+
+    // Заголовки рядків (назва породи)
+    tbody th {
+      font-weight: 600;
+    }
+
+    tbody th,
+    td {
+      border-block-end: 1px solid var(--color-border);
+    }
+
+    // Чергування фону рядків
+    tbody tr:nth-child(even) {
+      background-color: var(--color-surface-alt);
+    }
+
+    tbody tr:hover {
+      background-color: color-mix(in srgb, var(--color-accent) 14%, var(--color-surface));
+    }
+  }
+
+  // Числові стовпці — праворуч
+  .data-table__num {
+    font-variant-numeric: tabular-nums;
+    text-align: end;
+  }
+}

@@ -1,0 +1,134 @@
+// ---------- Форми адміністратора та відвідувача ----------
+@use '../abstracts/mixins' as *;
+
+@layer components {
+  .form {
+    max-inline-size: 40rem;
+    margin-block-end: var(--space-l);
+    padding: var(--space-m);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+  }
+
+  // ---- Групи полів ----
+  .form__group {
+    min-inline-size: 0;
+    margin-block: 0 var(--space-m);
+    padding: var(--space-m);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-s);
+  }
+
+  .form__legend {
+    padding-inline: var(--space-s);
+    color: var(--color-link);
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  // ---- Рядок «підпис + поле» ----
+  .form__row {
+    margin-block: 0 var(--space-m);
+    &:has(:required) > .form__label::after {
+      content: ' *';
+      color: var(--color-error);
+    }
+    &:has(.form__field:user-invalid) > .form__label::before {
+      content: '\26A0\00a0'; // знак «увага»
+    }
+  }
+  // Підписи розташовані над полями
+  .form__label {
+    display: block;
+    margin-block-end: var(--space-xs);
+    font-weight: 600;
+  }
+
+  .form__label--inline {
+    display: inline;
+    margin-inline-start: var(--space-xs);
+    font-weight: 400;
+  }
+
+  // ---- Поля ----
+  .form__field {
+    inline-size: 100%;
+    padding-block: 0.5em;
+    padding-inline: 0.75em;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-s);
+    color: var(--color-text);
+
+    &:focus-visible {
+      @include focus-ring;
+      border-color: var(--color-focus);
+    }
+
+    &:user-invalid {
+      border-color: var(--color-error);
+      box-shadow: 0 0 0 2px var(--color-error);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  textarea.form__field {
+    min-block-size: 6rem;
+    resize: vertical;
+  }
+
+  input[type='file'].form__field {
+    padding: var(--space-s);
+
+    &::file-selector-button {
+      margin-inline-end: var(--space-s);
+      padding-block: var(--space-xs);
+      padding-inline: var(--space-s);
+      background-color: var(--color-surface-alt);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-s);
+      color: var(--color-text);
+      cursor: pointer;
+    }
+  }
+  .form__option {
+    margin-block: 0 var(--space-xs);
+
+    label {
+      font-weight: 400;
+    }
+  }
+
+  .form__range {
+    inline-size: 100%;
+  }
+
+  // ---- Підказки (aria-describedby) ----
+  .form__hint {
+    margin-block: calc(-1 * var(--space-s)) var(--space-m);
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  .form__actions {
+    margin-block: var(--space-m) 0;
+
+    a {
+      margin-inline-start: var(--space-m);
+    }
+  }
+
+  // ---- Поточне зображення на формі редагування ----
+  .form__preview {
+    display: block;
+    margin-block-end: var(--space-m);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-s);
+  }
+}
