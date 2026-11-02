@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Про проєкт — Породи тварин</title>
+  <meta name="description" content="Про навчальний проєкт каталогу порід тварин: мета, склад і дані форм.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+  <header class="site-header">
+    <p class="site-header__brand"><a href="index.html"><img class="site-header__logo" src="images/logo.svg" alt="" width="40" height="40"> Породи тварин</a></p>
+    <nav class="site-nav" aria-label="Основне меню">
+      <ul>
+        <li><a href="index.html">Каталог</a></li>
+        <li><a href="about.html" aria-current="page">Про проєкт</a></li>
+      </ul>
+    </nav>
+    <form class="search" action="index.html" method="get" role="search">
+      <label class="form__label form__label--inline" for="site-search">Пошук породи</label>
+      <input class="form__field" id="site-search" name="q" type="search" maxlength="60" autocomplete="off">
+      <button class="button" type="submit">Знайти</button>
+    </form>
+  </header>
+  <main class="page-text" id="main">
+    <h1>Про проєкт</h1>
+    <p>Навчальний проєкт з дисципліни «Клієнтські технології Web-програмування». Лабораторна робота №4 — вебформи та елементи керування. Предметна область: породи тварин.</p>
+    <h2>Що є в проєкті</h2>
+    <ul>
+      <li>каталог порід;</li>
+      <li>сторінка деталей із формою запиту на консультацію;</li>
+      <li>навчальна сторінка адміністрування з формою додавання;</li>
+      <li>сторінка редагування породи.</li>
+    </ul>
+    <h2>Як користуватися формами</h2>
+    <ol>
+      <li>Відкрийте сторінку адміністрування за посиланням у підвалі.</li>
+      <li>Заповніть форму та натисніть «Додати».</li>
+      <li>Перегляньте передані дані в адресному рядку браузера.</li>
+    </ol>
+    <h2>Часті запитання</h2>
+    <div class="faq">
+      <details class="faq__item">
+        <summary class="faq__summary">Чи зберігаються дані, які я вводжу у форми?</summary>
+        <p>Ні. Форми надсилаються методом GET на статичний сервер, тому дані лише з’являються в адресному рядку й ніде не зберігаються.</p>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__summary">Що означає позначка «гіпоалергенна»?</summary>
+        <p>Це навчальна позначка в картці породи. Повністю безпечних для алергіків порід не існує, тому для реального вибору потрібна консультація лікаря.</p>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__summary">Чому на сторінці адміністрування немає захисту?</summary>
+        <p>Це навчальна імітація. Контроль доступу й остаточну перевірку даних виконує сервер, якого в проєкті немає.</p>
+      </details>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>Породи тварин</p>
+    <nav class="site-nav" aria-label="Службова навігація">
+      <ul>
+        <li><a href="index.html">Каталог</a></li>
+        <li><a href="about.html">Про проєкт</a></li>
+        <li><a href="admin.html">Адміністрування</a></li>
+      </ul>
+    </nav>
+    <p><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
+  </footer>
+</body>
+</html>
