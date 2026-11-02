@@ -1,0 +1,12 @@
+$category-badges: (
+  ('dogs', '--badge-dogs-bg', '--badge-dogs-text'),
+  ('cats', '--badge-cats-bg', '--badge-cats-text'),
+  ('rabbits', '--badge-rabbits-bg', '--badge-rabbits-text'),
+  ('other', '--badge-other-bg', '--badge-other-text'),
+);
+
+$size-badges: (
+  ('small', '--badge-small-bg', '--badge-small-text'),
+  ('medium', '--badge-medium-bg', '--badge-medium-text'),
+  ('large', '--badge-large-bg', '--badge-large-text'),
+);

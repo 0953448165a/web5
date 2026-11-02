@@ -1,0 +1,95 @@
+// ---------- ШАР base: дизайн-токени ----------
+// Світла тема — значення за замовчуванням.
+// Темна тема перевизначає ЛИШЕ токени (медіазапит нижче).
+@layer base {
+  :root {
+    color-scheme: light dark;
+
+    // Кольори
+    --color-bg: #f6f1e7; // тло сторінки (пісочний)
+    --color-surface: #fffdf8; // тло карток і форм
+    --color-surface-alt: #ece5d6; // чергування рядків, шапка таблиці
+    --color-text: #22301f; // основний текст
+    --color-text-muted: #566052; // приглушений текст, підказки
+    --color-accent: #2f6b3a; // акцент (лісовий зелений)
+    --color-on-accent: #ffffff; // текст на акцентному тлі
+    --color-link: #245c30; // посилання
+    --color-border: #7d8372; // рамки (>= 3:1 на всіх тлах)
+    --color-focus: #1a5fb4; // індикатор фокусу
+    --color-error: #b3261e; // помилка
+
+    // Бейджі категорій
+    --badge-dogs-bg: #f3dcc0;
+    --badge-dogs-text: #5a3410;
+    --badge-cats-bg: #e2dbf1;
+    --badge-cats-text: #3d2a66;
+    --badge-rabbits-bg: #f6d9de;
+    --badge-rabbits-text: #6a1f2e;
+    --badge-other-bg: #dce5d4;
+    --badge-other-text: #2a4120;
+
+    // Бейджі розмірних груп
+    --badge-small-bg: #d7e8f2;
+    --badge-small-text: #17465f;
+    --badge-medium-bg: #f1e6b8;
+    --badge-medium-text: #5a4a0a;
+    --badge-large-bg: #f2cfc3;
+    --badge-large-text: #6b2410;
+
+    // Шрифти
+    --font-body: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: Georgia, 'Times New Roman', serif;
+    --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+    // Шкала відступів (rem)
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --space-xl: 3rem;
+
+    // Радіуси та тіні
+    --radius-s: 6px;
+    --radius-card: 12px;
+    --radius-pill: 999px;
+    --shadow-card: 0 1px 3px rgb(0 0 0 / 0.12), 0 4px 12px rgb(0 0 0 / 0.08);
+
+    // Довжина рядка тексту
+    --measure: 65ch;
+  }
+
+  // Темна тема: ті самі токени, інші значення
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #131912;
+      --color-surface: #1c241b;
+      --color-surface-alt: #243023;
+      --color-text: #e8eee3;
+      --color-text-muted: #a9b5a3;
+      --color-accent: #86c991;
+      --color-on-accent: #0f1a10;
+      --color-link: #9ad7a4;
+      --color-border: #7b8777;
+      --color-focus: #8ab4f8;
+      --color-error: #ff9189;
+
+      --badge-dogs-bg: #5a3a1c;
+      --badge-dogs-text: #f7dfc2;
+      --badge-cats-bg: #3f3560;
+      --badge-cats-text: #e6dffa;
+      --badge-rabbits-bg: #6a2f3b;
+      --badge-rabbits-text: #fbdde2;
+      --badge-other-bg: #34502a;
+      --badge-other-text: #e0ecd8;
+
+      --badge-small-bg: #1f4a63;
+      --badge-small-text: #d9eefa;
+      --badge-medium-bg: #5e4f12;
+      --badge-medium-text: #f6ecc0;
+      --badge-large-bg: #6b3220;
+      --badge-large-text: #f7d9cf;
+
+      --shadow-card: 0 1px 3px rgb(0 0 0 / 0.5), 0 4px 12px rgb(0 0 0 / 0.35);
+    }
+  }
+}

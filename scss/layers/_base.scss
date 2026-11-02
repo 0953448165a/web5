@@ -1,0 +1,114 @@
+// ---------- ШАР base: типографіка та елементи документа ----------
+@use '../abstracts/mixins' as *;
+
+@layer base {
+  // ---- Документ ----
+  html {
+    font-size: 100%; // 1rem = розмір шрифту з налаштувань браузера
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  main {
+    padding-block: var(--space-l);
+    padding-inline: var(--space-m);
+  }
+
+  // ---- Заголовки ----
+  :where(h1, h2, h3, h4) {
+    margin-block: 0 var(--space-s);
+    font-family: var(--font-heading);
+    line-height: 1.25;
+  }
+
+  :where(h1) {
+    font-size: 2rem;
+  }
+
+  :where(h2) {
+    margin-block-start: var(--space-l);
+    font-size: 1.5rem;
+  }
+
+  :where(h3) {
+    font-size: 1.25rem;
+  }
+
+  main h3 {
+    color: var(--color-link);
+  }
+
+  // ---- Абзаци та списки ----
+  p {
+    margin-block: 0 var(--space-m);
+  }
+
+  ul,
+  ol {
+    margin-block: 0 var(--space-m);
+    padding-inline-start: var(--space-l);
+  }
+
+  li::marker {
+    color: var(--color-accent);
+  }
+
+  // ---- Посилання ----
+  a {
+    color: var(--color-link);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  // ---- Фокус: перевизначаємо, а не прибираємо ----
+  :focus-visible {
+    @include focus-ring;
+  }
+
+  // ---- Таблиці (загальні) ----
+  table {
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding-block: var(--space-s);
+    padding-inline: var(--space-m);
+    text-align: start;
+    vertical-align: top;
+  }
+
+  // ---- Елементи форм: колір керування ----
+  input[type='checkbox'],
+  input[type='radio'],
+  input[type='range'] {
+    accent-color: var(--color-accent);
+  }
+  code,
+  kbd {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  hr {
+    margin-block: var(--space-l);
+    border: 0;
+    border-block-start: 1px solid var(--color-border);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+}
