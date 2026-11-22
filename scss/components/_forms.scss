@@ -97,8 +97,27 @@
       cursor: pointer;
     }
   }
+
+  // ---- Група перемикачів: гнучкий рядок із перенесенням ----
+  .form__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-l);
+  }
+
+  // ---- Рядок «прапорець + підпис» ----
+  .form__row--check {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-s);
+
+    .form__label--inline {
+      margin: 0;
+    }
+  }
+
   .form__option {
-    margin-block: 0 var(--space-xs);
+    margin: 0;
 
     label {
       font-weight: 400;
@@ -116,12 +135,13 @@
     font-size: 0.875rem;
   }
 
+  // ---- Група кнопок: гнучкий рядок із перенесенням ----
   .form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s) var(--space-m);
     margin-block: var(--space-m) 0;
-
-    a {
-      margin-inline-start: var(--space-m);
-    }
   }
 
   // ---- Поточне зображення на формі редагування ----

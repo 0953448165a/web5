@@ -39,6 +39,14 @@
     }
   }
 
+  // Дії рядка таблиці
+  .row-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs) var(--space-s);
+  }
+
   // Числові стовпці — праворуч
   .data-table__num {
     font-variant-numeric: tabular-nums;
