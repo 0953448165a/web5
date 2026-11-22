@@ -3,14 +3,14 @@
     margin-block-end: var(--space-m);
     font-size: 0.9375rem;
 
-    ol {
+    // Flexbox замість display: inline; порядок збігається з розміткою
+    .breadcrumbs__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       margin: 0;
       padding: 0;
       list-style: none;
-    }
-
-    li {
-      display: inline;
     }
     li + li::before {
       content: '/';

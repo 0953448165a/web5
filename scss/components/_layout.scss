@@ -24,10 +24,16 @@
     padding-inline: var(--space-l);
     background-color: var(--color-surface);
     border-block-end: 4px solid var(--color-accent);
+
+    // Flexbox: бренд, меню й пошук в одному рядку з перенесенням
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s) var(--space-l);
   }
 
   .site-header__brand {
-    margin-block-end: var(--space-s);
+    margin: 0;
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
@@ -50,6 +56,13 @@
       margin: 0;
       padding: 0;
       list-style: none;
+    }
+
+    // Пункти меню — гнучкий рядок з перенесенням
+    .site-nav__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs) var(--space-s);
     }
 
     a {
@@ -77,13 +90,24 @@
   }
 
   // ---- Пошук у шапці ----
+  // Рядок «підпис – поле – дія»: поле забирає вільне місце
   .search {
-    margin-block-start: var(--space-m);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
+    flex: 1 1 22rem;
+    max-inline-size: 32rem;
+    margin-inline-start: auto;
+
+    .form__label--inline {
+      margin-inline-start: 0;
+    }
 
     .form__field {
+      flex: 1 1 12rem;
       inline-size: auto;
-      min-inline-size: 12rem;
-      max-inline-size: 100%;
+      min-inline-size: 0;
     }
   }
 
@@ -97,8 +121,19 @@
     color: var(--color-text-muted);
     font-size: 0.9375rem;
 
+    // Flexbox: назва, меню й копірайт; копірайт займає окремий рядок
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-s) var(--space-l);
+
     p {
-      margin-block-end: var(--space-s);
+      margin: 0;
+    }
+
+    .site-footer__copy {
+      flex-basis: 100%;
     }
 
     // У підвалі фон збігається з тлом hover, тому показуємо рамкою
