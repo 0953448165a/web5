@@ -12,8 +12,8 @@
   <a class="skip-link" href="#main">Перейти до вмісту</a>
   <header class="site-header">
     <p class="site-header__brand"><a href="index.html"><img class="site-header__logo" src="images/logo.svg" alt="" width="40" height="40"> Породи тварин</a></p>
-    <nav class="site-nav" aria-label="Основне меню">
-      <ul>
+    <nav class="site-nav site-nav--main" aria-label="Основне меню">
+      <ul class="site-nav__list">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
       </ul>
@@ -48,7 +48,11 @@
           <td>велика</td>
           <td class="data-table__num"><data value="29.0">29.0 кг</data></td>
           <td>підходить</td>
-          <td><a href="admin-edit.html">Редагувати Лабрадор-ретривер</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Лабрадор-ретривер</a>
+            </div>
+          </td>
         </tr>
         <tr>
           <th scope="row">Німецька вівчарка</th>
@@ -56,7 +60,11 @@
           <td>велика</td>
           <td class="data-table__num"><data value="32.0">32.0 кг</data></td>
           <td>не підходить</td>
-          <td><a href="admin-edit.html">Редагувати Німецька вівчарка</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Німецька вівчарка</a>
+            </div>
+          </td>
         </tr>
         <tr>
           <th scope="row">Чихуахуа</th>
@@ -64,7 +72,11 @@
           <td>мала</td>
           <td class="data-table__num"><data value="2.5">2.5 кг</data></td>
           <td>підходить</td>
-          <td><a href="admin-edit.html">Редагувати Чихуахуа</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Чихуахуа</a>
+            </div>
+          </td>
         </tr>
         <tr>
           <th scope="row">Джек-рассел-тер’єр</th>
@@ -72,7 +84,11 @@
           <td>мала</td>
           <td class="data-table__num"><data value="6.5">6.5 кг</data></td>
           <td>підходить</td>
-          <td><a href="admin-edit.html">Редагувати Джек-рассел-тер’єр</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Джек-рассел-тер’єр</a>
+            </div>
+          </td>
         </tr>
         <tr>
           <th scope="row">Мейн-кун</th>
@@ -80,7 +96,11 @@
           <td>велика</td>
           <td class="data-table__num"><data value="7.5">7.5 кг</data></td>
           <td>підходить</td>
-          <td><a href="admin-edit.html">Редагувати Мейн-кун</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Мейн-кун</a>
+            </div>
+          </td>
         </tr>
         <tr>
           <th scope="row">Британська короткошерста</th>
@@ -88,7 +108,11 @@
           <td>середня</td>
           <td class="data-table__num"><data value="5.5">5.5 кг</data></td>
           <td>підходить</td>
-          <td><a href="admin-edit.html">Редагувати Британська короткошерста</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Британська короткошерста</a>
+            </div>
+          </td>
         </tr>
         <tr>
           <th scope="row">Бенгальська кішка</th>
@@ -96,7 +120,11 @@
           <td>середня</td>
           <td class="data-table__num"><data value="5.0">5.0 кг</data></td>
           <td>підходить</td>
-          <td><a href="admin-edit.html">Редагувати Бенгальська кішка</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Бенгальська кішка</a>
+            </div>
+          </td>
         </tr>
         <tr>
           <th scope="row">Фландрський гігант</th>
@@ -104,7 +132,11 @@
           <td>велика</td>
           <td class="data-table__num"><data value="6.0">6.0 кг</data></td>
           <td>не підходить</td>
-          <td><a href="admin-edit.html">Редагувати Фландрський гігант</a></td>
+          <td>
+            <div class="row-actions">
+              <a class="row-actions__link" href="admin-edit.html">Редагувати Фландрський гігант</a>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -163,27 +195,27 @@
           <textarea class="form__field" id="breed-description" name="description" rows="4" cols="40" maxlength="500" aria-describedby="breed-description-hint"></textarea>
         </p>
         <p class="form__hint" id="breed-description-hint">Не більше 500 символів.</p>
-        <p class="form__row">
+        <p class="form__row form__row--check">
           <input id="breed-apartment" name="apartmentFriendly" type="checkbox" value="yes">
           <label class="form__label form__label--inline" for="breed-apartment">Підходить для утримання в квартирі</label>
         </p>
       </fieldset>
-      <p class="form__actions">
+      <div class="form__actions">
         <button class="button" type="submit">Додати</button>
         <button class="button" type="reset">Очистити</button>
-      </p>
+      </div>
     </form>
   </main>
   <footer class="site-footer">
     <p>Породи тварин</p>
-    <nav class="site-nav" aria-label="Службова навігація">
-      <ul>
+    <nav class="site-nav site-nav--footer" aria-label="Службова навігація">
+      <ul class="site-nav__list">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
         <li><a href="admin.html" aria-current="page">Адміністрування</a></li>
       </ul>
     </nav>
-    <p><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
+    <p class="site-footer__copy"><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
   </footer>
 </body>
 </html>

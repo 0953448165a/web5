@@ -12,8 +12,8 @@
   <a class="skip-link" href="#main">Перейти до вмісту</a>
   <header class="site-header">
     <p class="site-header__brand"><a href="index.html"><img class="site-header__logo" src="images/logo.svg" alt="" width="40" height="40"> Породи тварин</a></p>
-    <nav class="site-nav" aria-label="Основне меню">
-      <ul>
+    <nav class="site-nav site-nav--main" aria-label="Основне меню">
+      <ul class="site-nav__list">
         <li><a href="index.html" aria-current="page">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
       </ul>
@@ -29,106 +29,136 @@
     <p>На цьому етапі сторінка деталей існує лише для породи «Лабрадор-ретривер».</p>
     <section aria-labelledby="catalog-title">
       <h2 id="catalog-title">Породи</h2>
-      <article class="card">
-        <h3 class="card__title"><a href="details.html">Лабрадор-ретривер</a></h3>
-        <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
-          <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 29.0 кг</li>
-          <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
-          <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Німецька вівчарка</h3>
-        <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
-          <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 32.0 кг</li>
-          <li class="card__status" data-apartment="false"><strong>Для квартири:</strong> ні</li>
-          <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Чихуахуа</h3>
-        <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
-          <li class="badge" data-size="small"><strong>Розмірна група:</strong> мала</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 2.5 кг</li>
-          <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
-          <li class="card__status" data-hypoallergenic="true"><strong>Гіпоалергенна:</strong> так</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Джек-рассел-тер’єр</h3>
-        <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
-          <li class="badge" data-size="small"><strong>Розмірна група:</strong> мала</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 6.5 кг</li>
-          <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
-          <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Мейн-кун</h3>
-        <img class="card__image" src="images/cat.svg" alt="Ілюстрація: коти" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="cats"><strong>Категорія:</strong> Коти</li>
-          <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 7.5 кг</li>
-          <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
-          <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Британська короткошерста</h3>
-        <img class="card__image" src="images/cat.svg" alt="Ілюстрація: коти" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="cats"><strong>Категорія:</strong> Коти</li>
-          <li class="badge" data-size="medium"><strong>Розмірна група:</strong> середня</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 5.5 кг</li>
-          <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
-          <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Бенгальська кішка</h3>
-        <img class="card__image" src="images/cat.svg" alt="Ілюстрація: коти" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="cats"><strong>Категорія:</strong> Коти</li>
-          <li class="badge" data-size="medium"><strong>Розмірна група:</strong> середня</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 5.0 кг</li>
-          <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
-          <li class="card__status" data-hypoallergenic="true"><strong>Гіпоалергенна:</strong> так</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Фландрський гігант</h3>
-        <img class="card__image" src="images/rabbit.svg" alt="Ілюстрація: кролики" width="400" height="300" loading="lazy">
-        <ul class="card__facts">
-          <li class="badge" data-category="rabbits"><strong>Категорія:</strong> Кролики</li>
-          <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
-          <li class="card__weight"><strong>Середня вага:</strong> 6.0 кг</li>
-          <li class="card__status" data-apartment="false"><strong>Для квартири:</strong> ні</li>
-          <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
-        </ul>
-      </article>
+      <form class="filters" id="catalog-filters" action="index.html" method="get" aria-label="Фільтри каталогу">
+        <fieldset class="filters__group">
+          <legend class="filters__legend">Категорія</legend>
+          <div class="chips">
+            <input class="chip__input" id="cat-all" type="radio" name="category" value="all" checked>
+            <label class="chip" for="cat-all">Усі</label>
+            <input class="chip__input" id="cat-dogs" type="radio" name="category" value="dogs">
+            <label class="chip" for="cat-dogs">Собаки</label>
+            <input class="chip__input" id="cat-cats" type="radio" name="category" value="cats">
+            <label class="chip" for="cat-cats">Коти</label>
+            <input class="chip__input" id="cat-rabbits" type="radio" name="category" value="rabbits">
+            <label class="chip" for="cat-rabbits">Кролики</label>
+          </div>
+        </fieldset>
+        <div class="filters__row">
+          <label class="form__label form__label--inline" for="filter-size">Розмірна група</label>
+          <select class="form__field" id="filter-size" name="sizeGroup">
+            <option value="">Будь-яка</option>
+            <option value="small">Мала</option>
+            <option value="medium">Середня</option>
+            <option value="large">Велика</option>
+          </select>
+        </div>
+        <div class="filters__actions">
+          <button class="button" type="submit">Застосувати</button>
+          <button class="button" type="reset">Скинути</button>
+        </div>
+      </form>
+      <div class="catalog">
+        <article class="card">
+          <h3 class="card__title"><a href="details.html">Лабрадор-ретривер</a></h3>
+          <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
+            <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 29.0 кг</li>
+            <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
+            <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Німецька вівчарка</h3>
+          <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
+            <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 32.0 кг</li>
+            <li class="card__status" data-apartment="false"><strong>Для квартири:</strong> ні</li>
+            <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Чихуахуа</h3>
+          <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
+            <li class="badge" data-size="small"><strong>Розмірна група:</strong> мала</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 2.5 кг</li>
+            <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
+            <li class="card__status" data-hypoallergenic="true"><strong>Гіпоалергенна:</strong> так</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Джек-рассел-тер’єр</h3>
+          <img class="card__image" src="images/dog.svg" alt="Ілюстрація: собаки" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="dogs"><strong>Категорія:</strong> Собаки</li>
+            <li class="badge" data-size="small"><strong>Розмірна група:</strong> мала</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 6.5 кг</li>
+            <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
+            <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Мейн-кун</h3>
+          <img class="card__image" src="images/cat.svg" alt="Ілюстрація: коти" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="cats"><strong>Категорія:</strong> Коти</li>
+            <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 7.5 кг</li>
+            <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
+            <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Британська короткошерста</h3>
+          <img class="card__image" src="images/cat.svg" alt="Ілюстрація: коти" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="cats"><strong>Категорія:</strong> Коти</li>
+            <li class="badge" data-size="medium"><strong>Розмірна група:</strong> середня</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 5.5 кг</li>
+            <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
+            <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Бенгальська кішка</h3>
+          <img class="card__image" src="images/cat.svg" alt="Ілюстрація: коти" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="cats"><strong>Категорія:</strong> Коти</li>
+            <li class="badge" data-size="medium"><strong>Розмірна група:</strong> середня</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 5.0 кг</li>
+            <li class="card__status" data-apartment="true"><strong>Для квартири:</strong> так</li>
+            <li class="card__status" data-hypoallergenic="true"><strong>Гіпоалергенна:</strong> так</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Фландрський гігант</h3>
+          <img class="card__image" src="images/rabbit.svg" alt="Ілюстрація: кролики" width="400" height="300" loading="lazy">
+          <ul class="card__facts">
+            <li class="badge" data-category="rabbits"><strong>Категорія:</strong> Кролики</li>
+            <li class="badge" data-size="large"><strong>Розмірна група:</strong> велика</li>
+            <li class="card__weight"><strong>Середня вага:</strong> 6.0 кг</li>
+            <li class="card__status" data-apartment="false"><strong>Для квартири:</strong> ні</li>
+            <li class="card__status" data-hypoallergenic="false"><strong>Гіпоалергенна:</strong> ні</li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
   <footer class="site-footer">
     <p>Породи тварин</p>
-    <nav class="site-nav" aria-label="Службова навігація">
-      <ul>
+    <nav class="site-nav site-nav--footer" aria-label="Службова навігація">
+      <ul class="site-nav__list">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
         <li><a href="admin.html">Адміністрування</a></li>
       </ul>
     </nav>
-    <p><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
+    <p class="site-footer__copy"><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
   </footer>
 </body>
 </html>

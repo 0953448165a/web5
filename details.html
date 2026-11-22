@@ -12,8 +12,8 @@
   <a class="skip-link" href="#main">Перейти до вмісту</a>
   <header class="site-header">
     <p class="site-header__brand"><a href="index.html"><img class="site-header__logo" src="images/logo.svg" alt="" width="40" height="40"> Породи тварин</a></p>
-    <nav class="site-nav" aria-label="Основне меню">
-      <ul>
+    <nav class="site-nav site-nav--main" aria-label="Основне меню">
+      <ul class="site-nav__list">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
       </ul>
@@ -24,26 +24,30 @@
       <button class="button" type="submit">Знайти</button>
     </form>
   </header>
-  <main class="page-text" id="main">
+  <main id="main">
     <nav class="breadcrumbs" aria-label="Хлібні крихти">
-      <ol>
+      <ol class="breadcrumbs__list">
         <li><a href="index.html">Каталог</a></li>
         <li aria-current="page">Лабрадор-ретривер</li>
       </ol>
     </nav>
     <h1>Лабрадор-ретривер</h1>
-    <figure class="figure">
-      <img src="images/dog.svg" alt="Ілюстрація: собака" width="400" height="300">
-      <figcaption>Лабрадор-ретривер</figcaption>
-    </figure>
-    <h2>Характеристики</h2>
-    <dl class="spec-list">
-      <div><dt>Категорія</dt><dd>Собаки</dd></div>
-      <div><dt>Розмірна група</dt><dd>велика</dd></div>
-      <div><dt>Середня вага</dt><dd>29 кг</dd></div>
-      <div><dt>Для квартири</dt><dd>так</dd></div>
-    </dl>
-    <section aria-labelledby="review-title">
+    <div class="breed">
+      <figure class="figure breed__media">
+        <img src="images/dog.svg" alt="Ілюстрація: собака" width="400" height="300">
+        <figcaption>Лабрадор-ретривер</figcaption>
+      </figure>
+      <div class="breed__info">
+        <h2>Характеристики</h2>
+        <dl class="spec-list">
+          <div><dt>Категорія</dt><dd>Собаки</dd></div>
+          <div><dt>Розмірна група</dt><dd>велика</dd></div>
+          <div><dt>Середня вага</dt><dd>29 кг</dd></div>
+          <div><dt>Для квартири</dt><dd>так</dd></div>
+        </dl>
+      </div>
+    </div>
+    <section class="page-text" aria-labelledby="review-title">
       <h2 id="review-title">Запит на консультацію</h2>
       <p>Залиште контакти та бажану дату зв’язку. Форма надсилається методом GET, тож дані видно в адресному рядку.</p>
       <form class="form" id="review-form" action="details.html" method="get">
@@ -77,11 +81,13 @@
         </p>
         <fieldset class="form__group">
           <legend class="form__legend">Наскільки вас цікавить порода</legend>
-          <p class="form__option"><label><input type="radio" name="rating" value="1" required> 1</label></p>
-          <p class="form__option"><label><input type="radio" name="rating" value="2"> 2</label></p>
-          <p class="form__option"><label><input type="radio" name="rating" value="3"> 3</label></p>
-          <p class="form__option"><label><input type="radio" name="rating" value="4"> 4</label></p>
-          <p class="form__option"><label><input type="radio" name="rating" value="5"> 5</label></p>
+          <div class="form__options">
+            <p class="form__option"><label><input type="radio" name="rating" value="1" required> 1</label></p>
+            <p class="form__option"><label><input type="radio" name="rating" value="2"> 2</label></p>
+            <p class="form__option"><label><input type="radio" name="rating" value="3"> 3</label></p>
+            <p class="form__option"><label><input type="radio" name="rating" value="4"> 4</label></p>
+            <p class="form__option"><label><input type="radio" name="rating" value="5"> 5</label></p>
+          </div>
         </fieldset>
         <p class="form__row">
           <label class="form__label" for="review-experience">Досвід утримання тварин</label>
@@ -93,24 +99,26 @@
           <textarea class="form__field" id="review-comment" name="comment" rows="4" cols="40" minlength="10" maxlength="500" aria-describedby="review-comment-hint"></textarea>
         </p>
         <p class="form__hint" id="review-comment-hint">Необов’язково. Якщо пишете коментар, залиште від 10 до 500 символів.</p>
-        <p class="form__row">
+        <p class="form__row form__row--check">
           <input id="review-agree" name="agree" type="checkbox" value="yes" required>
           <label class="form__label form__label--inline" for="review-agree">Погоджуюся з правилами публікації відгуку</label>
         </p>
-        <p class="form__actions"><button class="button" type="submit">Надіслати запит</button></p>
+        <div class="form__actions">
+          <button class="button" type="submit">Надіслати запит</button>
+        </div>
       </form>
     </section>
   </main>
   <footer class="site-footer">
     <p>Породи тварин</p>
-    <nav class="site-nav" aria-label="Службова навігація">
-      <ul>
+    <nav class="site-nav site-nav--footer" aria-label="Службова навігація">
+      <ul class="site-nav__list">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
         <li><a href="admin.html">Адміністрування</a></li>
       </ul>
     </nav>
-    <p><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
+    <p class="site-footer__copy"><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
   </footer>
 </body>
 </html>

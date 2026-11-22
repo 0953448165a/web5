@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Редагування: Лабрадор-ретривер — Породи тварин</title>
-  <meta name="description" content="Навчальна форма редагування породи «Лабрадор-ретривер».">
+  <meta name="description" content="Навчальна форма редагування породи.">
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -12,8 +12,8 @@
   <a class="skip-link" href="#main">Перейти до вмісту</a>
   <header class="site-header">
     <p class="site-header__brand"><a href="index.html"><img class="site-header__logo" src="images/logo.svg" alt="" width="40" height="40"> Породи тварин</a></p>
-    <nav class="site-nav" aria-label="Основне меню">
-      <ul>
+    <nav class="site-nav site-nav--main" aria-label="Основне меню">
+      <ul class="site-nav__list">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
       </ul>
@@ -26,7 +26,7 @@
   </header>
   <main id="main">
     <nav class="breadcrumbs" aria-label="Хлібні крихти">
-      <ol>
+      <ol class="breadcrumbs__list">
         <li><a href="admin.html">Адміністрування</a></li>
         <li aria-current="page">Редагування: Лабрадор-ретривер</li>
       </ol>
@@ -87,7 +87,7 @@
           <textarea class="form__field" id="breed-description" name="description" rows="4" cols="40" maxlength="500" aria-describedby="breed-description-hint">Дружелюбна активна порода середнього та великого розміру. Добре вчиться, потребує щоденних прогулянок.</textarea>
         </p>
         <p class="form__hint" id="breed-description-hint">Не більше 500 символів.</p>
-        <p class="form__row">
+        <p class="form__row form__row--check">
           <input id="breed-apartment" name="apartmentFriendly" type="checkbox" value="yes" checked>
           <label class="form__label form__label--inline" for="breed-apartment">Підходить для утримання в квартирі</label>
         </p>
@@ -95,23 +95,23 @@
       <p>
         <img class="form__preview" src="images/dog.svg" alt="Поточне зображення породи" width="200" height="150">
       </p>
-      <p class="form__actions">
+      <div class="form__actions">
         <button class="button" type="submit">Зберегти зміни</button>
         <button class="button" type="reset">Скасувати зміни</button>
         <a href="admin.html">Повернутися до адміністрування</a>
-      </p>
+      </div>
     </form>
   </main>
   <footer class="site-footer">
     <p>Породи тварин</p>
-    <nav class="site-nav" aria-label="Службова навігація">
-      <ul>
+    <nav class="site-nav site-nav--footer" aria-label="Службова навігація">
+      <ul class="site-nav__list">
         <li><a href="index.html">Каталог</a></li>
         <li><a href="about.html">Про проєкт</a></li>
         <li><a href="admin.html" aria-current="page">Адміністрування</a></li>
       </ul>
     </nav>
-    <p><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
+    <p class="site-footer__copy"><small>© 2026 Породи тварин. Навчальний проєкт, Мудрий Ярослав, КН-43-5.</small></p>
   </footer>
 </body>
 </html>
