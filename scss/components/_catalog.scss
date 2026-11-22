@@ -1,0 +1,136 @@
+// ---------- Каталог: панель фільтрів, чипи, перелік карток, сторінка деталей ----------
+@layer components {
+  // ---- Панель фільтрів ----
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--space-m) var(--space-l);
+    margin-block-end: var(--space-l);
+    padding: var(--space-m);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+  }
+
+  .filters__group {
+    min-inline-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .filters__legend {
+    margin-block-end: var(--space-xs);
+    padding: 0;
+    font-weight: 600;
+  }
+
+  .filters__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
+
+    .form__label--inline {
+      margin: 0;
+    }
+
+    .form__field {
+      inline-size: auto;
+    }
+  }
+
+  // Кнопки притиснуті до кінця рядка
+  .filters__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    margin-inline-start: auto;
+  }
+
+  // ---- Чипи на основі перемикачів ----
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+  }
+
+  // Перемикач прихований візуально, але лишається в порядку фокусу
+  .chip__input {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    opacity: 0;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: 2.75rem;
+    padding-inline: var(--space-m);
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-text);
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-surface-alt);
+    }
+  }
+
+  .chip__input:checked + .chip {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-on-accent);
+
+    &::before {
+      content: '\2713\00a0'; // галочка: стан не лише кольором
+    }
+  }
+
+  .chip__input:focus-visible + .chip {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  // ---- Перелік карток (тимчасово Flexbox; у ЛР №7 буде Grid) ----
+  .catalog {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: var(--space-m);
+
+    > .card {
+      flex: 1 1 16rem;
+      max-inline-size: 24rem;
+    }
+  }
+
+  // ---- Сторінка деталей: зображення й характеристики поруч ----
+  .breed {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-m) var(--space-l);
+    margin-block-end: var(--space-l);
+  }
+
+  .breed__media {
+    flex: 1 1 16rem;
+    max-inline-size: 26rem;
+    margin: 0;
+  }
+
+  .breed__info {
+    flex: 2 1 18rem;
+    min-inline-size: 0;
+
+    h2 {
+      margin-block-start: 0;
+    }
+  }
+}
